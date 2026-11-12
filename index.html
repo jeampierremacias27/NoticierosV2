@@ -1,0 +1,317 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Periódicos del mundo</title>
+
+<style>
+body {
+    background-color: #F0F8FF;
+    font-family: Arial, sans-serif;
+    color: #17365D;
+    margin: 0;
+    padding: 20px 0;
+}
+
+h1, p {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 80%;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+}
+
+a {
+    color: #0066CC;
+}
+
+.ecuador-enlace {
+    cursor: pointer;
+    color: #0066CC;
+    text-decoration: underline;
+}
+
+.himnos {
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    background: linear-gradient(135deg, #d9eaff, #f4e1ff);
+    border: 2px solid #b8cfff;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px #b5c9e6;
+}
+
+.himnos h2 {
+    background: linear-gradient(90deg, #278bd6, #a45bea);
+    color: white;
+    padding: 18px;
+    border-radius: 15px;
+    margin-top: 0;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.tarjeta {
+    width: 145px;
+    padding: 15px 10px;
+    border-radius: 18px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    border: 3px solid white;
+    box-shadow: 0 5px 12px #b4c4df;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px) scale(1.04);
+}
+
+.bandera {
+    font-size: 65px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.espana {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.ecuador {
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+.argentina {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+
+.mexico {
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+}
+
+.reproductor {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px #c5d5f0;
+}
+
+.reproductor p {
+    font-weight: bold;
+    color: #5142a8;
+}
+
+audio {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#mensaje {
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    table, .himnos {
+        width: 96%;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .tarjeta {
+        width: 115px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌎 PERIÓDICOS DEL MUNDO</h1>
+<p>Lista de periódicos y sus dominios agrupados por países.</p>
+<hr>
+
+<table border="1" cellpadding="10" cellspacing="0">
+
+<tr bgcolor="#1F4E78">
+<th><font color="white">País</font></th>
+<th><font color="white">Nombre del periódico</font></th>
+<th><font color="white">Dominio web</font></th>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td rowspan="3" align="center" bgcolor="#D9EAF7">
+<b>🇪🇸 España</b>
+</td>
+<td>El País</td>
+<td><a href="elpais.html" target="_blank">elpais.com</a></td>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td>ABC</td>
+<td><a href="abc.html" target="_blank">abc.es</a></td>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td>El Mundo</td>
+<td><a href="elmundo.html" target="_blank">elmundo.es</a></td>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td rowspan="2" align="center" bgcolor="#D9EAD3">
+<b>
+<a class="ecuador-enlace"
+href="#"
+onclick="reproducirAudio('ecuador_exposicion', 'Exposición sobre Ecuador'); return false;">
+🇪🇨 Ecuador 🎙️
+</a>
+</b>
+</td>
+<td>El Universo</td>
+<td><a href="eluniverso.html" target="_blank">eluniverso.com</a></td>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td>El Comercio</td>
+<td><a href="elcomercio.html" target="_blank">elcomercio.com</a></td>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td rowspan="2" align="center" bgcolor="#FCE4D6">
+<b>🇦🇷 Argentina</b>
+</td>
+<td>Clarín</td>
+<td><a href="clarin.html" target="_blank">clarin.com</a></td>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td>La Nación</td>
+<td><a href="lanacion.html" target="_blank">lanacion.com.ar</a></td>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td rowspan="2" align="center" bgcolor="#FFF2CC">
+<b>🇲🇽 México</b>
+</td>
+<td>El Universal</td>
+<td><a href="eluniversal.html" target="_blank">eluniversal.com.mx</a></td>
+</tr>
+
+<tr bgcolor="#FFFFFF">
+<td>Excélsior</td>
+<td><a href="excelsior.html" target="_blank">excelsior.com.mx</a></td>
+</tr>
+
+</table>
+
+<!-- SECCION DE HIMNOS -->
+
+<div class="himnos">
+
+<h2>🎵 HIMNOS NACIONALES 🎵</h2>
+<p>🌟 ¡Presiona una bandera para escuchar su himno! 🌟</p>
+
+<div class="tarjetas">
+
+<div class="tarjeta espana"
+onclick="reproducirAudio('espana', 'Himno de España')">
+<span class="bandera">🇪🇸</span>
+España ▶
+</div>
+
+<div class="tarjeta ecuador"
+onclick="reproducirAudio('ecuador', 'Himno de Ecuador')">
+<span class="bandera">🇪🇨</span>
+Ecuador ▶
+</div>
+
+<div class="tarjeta argentina"
+onclick="reproducirAudio('argentina', 'Himno de Argentina')">
+<span class="bandera">🇦🇷</span>
+Argentina ▶
+</div>
+
+<div class="tarjeta mexico"
+onclick="reproducirAudio('mexico', 'Himno de México')">
+<span class="bandera">🇲🇽</span>
+México ▶
+</div>
+
+</div>
+
+<div class="reproductor">
+
+<p id="nombreHimno">
+🎧 Selecciona un país para escuchar su audio
+</p>
+
+<audio id="audioHimno" controls preload="none">
+Tu navegador no puede reproducir este audio.
+</audio>
+
+<p id="mensaje">Elige un país para comenzar.</p>
+
+</div>
+</div>
+
+<script>
+function reproducirAudio(archivo, nombre) {
+    var audio = document.getElementById("audioHimno");
+    var titulo = document.getElementById("nombreHimno");
+    var mensaje = document.getElementById("mensaje");
+
+    audio.pause();
+    audio.src = archivo + ".mp3";
+    audio.load();
+
+    titulo.innerHTML = "🎶 " + nombre;
+    mensaje.innerHTML = "Cargando audio...";
+
+    audio.play().then(function() {
+        mensaje.innerHTML = "▶ Reproduciendo: " + nombre;
+    }).catch(function() {
+        mensaje.innerHTML =
+            "⚠️ Revisa que el archivo " + archivo +
+            ".mp3 esté en la misma carpeta que el HTML.";
+    });
+}
+
+document.getElementById("audioHimno").addEventListener("ended", function() {
+    document.getElementById("mensaje").innerHTML =
+        "✅ Audio terminado";
+});
+
+document.getElementById("audioHimno").addEventListener("error", function() {
+    document.getElementById("mensaje").innerHTML =
+        "⚠️ No se encontró el archivo de audio o no es compatible.";
+});
+</script>
+
+</body>
+</html>
+```
